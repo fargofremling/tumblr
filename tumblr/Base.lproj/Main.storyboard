@@ -85,31 +85,43 @@
             <point key="canvasLocation" x="162" y="353"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="8GH-qU-VDF">
+        <scene sceneID="djT-gl-bGj">
             <objects>
-                <viewController id="QqL-iR-hwH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="B8J-VA-hk7">
+                <viewController id="aaE-db-GR3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WxG-fv-GH0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="15t-iA-VXa">
-                                <rect key="frame" x="10" y="156" width="300" height="132"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="wlK-qA-MP1">
+                                <rect key="frame" x="10" y="155" width="300" height="132"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FNi-fs-9LS">
-                                <rect key="frame" x="10" y="250" width="149" height="33"/>
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="18" id="0nU-Pw-ALp">
+                                <rect key="frame" x="26" y="207" width="252" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="20" id="njs-1o-yE0">
+                                <rect key="frame" x="25" y="163" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eZ0-n5-Usp">
+                                <rect key="frame" x="10" y="245" width="150" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="PYH-xI-i4Q"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="K9x-GV-A73"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1995756534" green="0.258290782" blue="0.3537286932" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="giT-3I-Zbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkv-iO-be5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-273" y="353"/>
+            <point key="canvasLocation" x="-237" y="352"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="5pl-v7-v6W">
@@ -131,7 +143,7 @@
                                 <rect key="frame" x="256" y="52" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="QqL-iR-hwH" kind="modal" id="ttJ-zO-LI0"/>
+                                    <segue destination="aaE-db-GR3" kind="modal" id="j1f-UU-Kuv"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_overlay" id="IaI-wr-ZVl">
@@ -190,7 +202,6 @@
                                 <state key="normal" image="nevermind"/>
                                 <connections>
                                     <action selector="didPressNeverMind:" destination="2XM-aw-L66" eventType="touchUpInside" id="zBf-Rj-7Eb"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="78E-AP-ePv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -204,6 +215,7 @@
                         <outlet property="quoteButton" destination="KSk-h5-ydC" id="MI3-dk-S1d"/>
                         <outlet property="textButton" destination="7CQ-uk-t6I" id="GzD-eW-hWV"/>
                         <outlet property="videoButton" destination="dLh-Fd-cv1" id="FrH-II-LAU"/>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="returnToTabBar" id="ZgT-dT-37x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IK-gh-h41" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,6 +330,6 @@
         <image name="video_icon" width="75" height="95"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="78E-AP-ePv"/>
+        <segue reference="K9x-GV-A73"/>
     </inferredMetricsTieBreakers>
 </document>

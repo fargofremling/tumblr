@@ -78,6 +78,7 @@ class ComposeViewController: UIViewController {
     }
     
     @IBAction func didPressNeverMind(sender: AnyObject) {
+        
         UIView.animateWithDuration(0.2) { () -> Void in
             self.textButton.center.y = self.textButtonInitial.y - 400
         }
@@ -94,14 +95,18 @@ class ComposeViewController: UIViewController {
             self.linkButton.center.y = self.linkButtonInitial.y - 400
         }
         
-        UIView.animateWithDuration(0.5) { () -> Void in
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
             self.chatButton.center.y = self.chatButtonInitial.y - 400
+            }) { (Bool) -> Void in
+                self.performSegueWithIdentifier("returnToTabBar", sender: sender)
         }
+        //        UIView.animateWithDuration(0.5) { () -> Void in
+        //            self.chatButton.center.y = self.chatButtonInitial.y - 400
+        //        }
         UIView.animateWithDuration(0.2) { () -> Void in
             self.videoButton.center.y = self.videoButtonInitial.y - 400
         }
     }
-    
     /*
     // MARK: - Navigation
     
