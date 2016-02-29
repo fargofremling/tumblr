@@ -17,6 +17,7 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var linkButton: UIButton!
     @IBOutlet weak var chatButton: UIButton!
     @IBOutlet weak var videoButton: UIButton!
+    @IBOutlet weak var neverMindButton: UIButton!
     
     var textButtonInitial: CGPoint!
     var photoButtonInitial: CGPoint!
@@ -24,7 +25,7 @@ class ComposeViewController: UIViewController {
     var linkButtonInitial: CGPoint!
     var chatButtonInitial: CGPoint!
     var videoButtonInitial: CGPoint!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +35,7 @@ class ComposeViewController: UIViewController {
         linkButtonInitial = linkButton.center
         chatButtonInitial = chatButton.center
         videoButtonInitial = videoButton.center
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -46,7 +47,7 @@ class ComposeViewController: UIViewController {
         chatButton.center.y += 400
         videoButton.center.y += 400
     }
-
+    
     override func viewDidAppear(animated: Bool) {
         UIView.animateWithDuration(0.2) { () -> Void in
             self.textButton.center.y = self.textButtonInitial.y
@@ -69,22 +70,46 @@ class ComposeViewController: UIViewController {
         UIView.animateWithDuration(0.2) { () -> Void in
             self.videoButton.center.y = self.videoButtonInitial.y
         }
-
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func didPressNeverMind(sender: AnyObject) {
+        UIView.animateWithDuration(0.2) { () -> Void in
+            self.textButton.center.y = self.textButtonInitial.y - 400
+        }
+        
+        UIView.animateWithDuration(0.3) { () -> Void in
+            self.photoButton.center.y = self.photoButtonInitial.y - 400
+        }
+        
+        UIView.animateWithDuration(0.1) { () -> Void in
+            self.quoteButton.center.y = self.quoteButtonInitial.y - 400
+        }
+        
+        UIView.animateWithDuration(0.4) { () -> Void in
+            self.linkButton.center.y = self.linkButtonInitial.y - 400
+        }
+        
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.chatButton.center.y = self.chatButtonInitial.y - 400
+        }
+        UIView.animateWithDuration(0.2) { () -> Void in
+            self.videoButton.center.y = self.videoButtonInitial.y - 400
+        }
+    }
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

@@ -9,13 +9,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
-    @IBOutlet weak var homeScrollView: UIScrollView!
-    @IBOutlet weak var homeImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeScrollView.contentSize = CGSize (width: 320, height: 530)
         
         // Do any additional setup after loading the view.
     }

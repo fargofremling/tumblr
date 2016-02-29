@@ -119,38 +119,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="aCG-jC-WrR">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home" id="Sdm-nt-sY2">
+                                <rect key="frame" x="0.0" y="22" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_spinner" id="Ac8-L7-dMJ">
+                                <rect key="frame" x="87" y="193" width="146" height="146"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vXF-df-tNj">
+                                <rect key="frame" x="256" y="52" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home" id="Sdm-nt-sY2">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_spinner" id="Ac8-L7-dMJ">
-                                        <rect key="frame" x="87" y="158" width="146" height="146"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_overlay" id="IaI-wr-ZVl">
-                                        <rect key="frame" x="0.0" y="266" width="320" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vXF-df-tNj">
-                                        <rect key="frame" x="256" y="30" width="64" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <segue destination="QqL-iR-hwH" kind="modal" id="ttJ-zO-LI0"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </scrollView>
+                                <connections>
+                                    <segue destination="QqL-iR-hwH" kind="modal" id="ttJ-zO-LI0"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_overlay" id="IaI-wr-ZVl">
+                                <rect key="frame" x="0.0" y="275" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1995756534" green="0.258290782" blue="0.3537286932" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <connections>
-                        <outlet property="homeImageView" destination="Sdm-nt-sY2" id="NuI-MY-6lE"/>
-                        <outlet property="homeScrollView" destination="aCG-jC-WrR" id="kNi-7U-PBd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uH6-1W-yPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,18 +179,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chat_icon"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dLh-Fd-cv1">
+                                <rect key="frame" x="218" y="261" width="75" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="video_icon"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ook-Gc-fwX">
                                 <rect key="frame" x="0.0" y="515" width="320" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="nevermind"/>
                                 <connections>
+                                    <action selector="didPressNeverMind:" destination="2XM-aw-L66" eventType="touchUpInside" id="zBf-Rj-7Eb"/>
                                     <segue destination="BYZ-38-t0r" kind="modal" id="78E-AP-ePv"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dLh-Fd-cv1">
-                                <rect key="frame" x="218" y="261" width="75" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="video_icon"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1995756534" green="0.258290782" blue="0.3537286932" alpha="1" colorSpace="calibratedRGB"/>
@@ -208,6 +199,7 @@
                     <connections>
                         <outlet property="chatButton" destination="KeJ-Ck-3mv" id="F0I-eT-ker"/>
                         <outlet property="linkButton" destination="ia6-e9-r3a" id="Zbp-mm-Di0"/>
+                        <outlet property="neverMindButton" destination="ook-Gc-fwX" id="Bfx-wn-zZL"/>
                         <outlet property="photoButton" destination="dhT-3t-h0F" id="Un1-Mi-zcj"/>
                         <outlet property="quoteButton" destination="KSk-h5-ydC" id="MI3-dk-S1d"/>
                         <outlet property="textButton" destination="7CQ-uk-t6I" id="GzD-eW-hWV"/>
@@ -226,13 +218,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="account" id="c73-g7-vEW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Cto-2m-wTx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="484"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="account" id="c73-g7-vEW">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1995756534" green="0.258290782" blue="0.3537286932" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="accountScrollView" destination="Cto-2m-wTx" id="gpw-uj-JOS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkT-8U-O1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,6 +318,6 @@
         <image name="video_icon" width="75" height="95"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PYH-xI-i4Q"/>
+        <segue reference="78E-AP-ePv"/>
     </inferredMetricsTieBreakers>
 </document>
