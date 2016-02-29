@@ -7,6 +7,11 @@ Time spent: #10 hours
 
 #Project Requirements
 
+ - Tapping on Home, Search, Account, or Trending should show the respective screen and highlight the tab bar button
+ - Compose button modally presents the compose screen with animation of compose buttons
+ - Login button modally presents login screen
+ - Trending has a scroll view to show entire content
+
 #Demo GIF
 
 
