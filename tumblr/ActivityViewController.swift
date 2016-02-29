@@ -10,8 +10,12 @@ import UIKit
 
 class ActivityViewController: UIViewController {
 
+    @IBOutlet weak var trendingScrollView: UIScrollView!
+    @IBOutlet weak var trendingImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        trendingScrollView.contentSize = trendingImageView.image!.size
 
         // Do any additional setup after loading the view.
     }
