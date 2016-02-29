@@ -3,7 +3,7 @@ CodePath Week 4 Assignment
 
 The purpose of this assignment is to leverage animations and gestures to create custom navigation.
 
-Time spent: #10 hours
+Time spent: 10 hours
 
 #Project Requirements
 
